@@ -10,25 +10,27 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
-    private TextView tv1, tv2;
-    Button btn1, btn2;
+    TextView wel;
+    RelativeLayout rel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
 
-        tv1 = findViewById(R.id.tv1);
-        tv2 = findViewById(R.id.tv2);
+        wel = findViewById(R.id.wel);
+        rel = findViewById(R.id.rel);
 
-        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.splashtransition);
-        tv1.startAnimation(myanim);
-        tv2.startAnimation(myanim);
+        Animation welanim = AnimationUtils.loadAnimation(this, R.anim.splashtransition);
+        Animation relanim = AnimationUtils.loadAnimation(this, R.anim.rel_anim);
+        wel.startAnimation(welanim);
+        rel.startAnimation(relanim);
         final Intent intent = new Intent(SplashScreen.this, MainActivity.class);
         Thread timer = new Thread() {
             public void run() {

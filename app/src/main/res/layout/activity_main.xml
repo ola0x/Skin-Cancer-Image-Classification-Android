@@ -18,7 +18,7 @@
             android:id="@+id/btn_model1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Malaria Model"
+            android:text="Skin Cancer Model"
             android:textColor="@color/teal_primary"
             android:background="@drawable/background_trim_teal"/>
 
